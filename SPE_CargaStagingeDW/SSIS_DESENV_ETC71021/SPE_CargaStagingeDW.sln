@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SPE_CargaStagingeDW", "SSIS_DESENV_ETC71021\SPE_CargaStagingeDW.dtproj", "{80FAB1D2-D0EA-4744-ACB4-863D49AF4937}"
+	GlobalSection(JazzSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+		SolutionBindings = <Solution Location In Database>
+	EndGlobalSection
+EndProject
+Global
+	GlobalSection(JazzSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+		SolutionBindings = <Solution Location In Database>
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80FAB1D2-D0EA-4744-ACB4-863D49AF4937}.Development|Default.ActiveCfg = Development
+		{80FAB1D2-D0EA-4744-ACB4-863D49AF4937}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1208 @@
+
+INSERT INTO [sis_spe].[TT_ACOMP_EMPREENDIMENTO]
+           ([ID_ACOMP_EMPREENDIMENTO]
+           ,[ID_EMPREENDIMENTO]
+           ,[FATOS_RELEVANTES]
+           ,[JUSTIFICA_DESVIO_FISICO]
+           ,[JUSTIFICA_DESVIO_FINANC]
+           ,[RESULTADOS_OPERACIONAIS]
+           ,[OBSERVACAO]
+           ,[REGULATORIO]
+           ,[ENG_IMPLANTA_OPERA]
+           ,[FUNDIARIO_AMBIENTAL]
+           ,[OUTRAS_QUESTOES]
+           ,[GESTAO]
+           ,[SEGURANCA_TRABALHO]
+		   ,[DT_REFERENCIA])
+
+SELECT [ID]
+      ,[EmpreendimentoId]
+      ,[FatosRelevantes]
+      ,[JustificativasDosDesviosFísicos]
+      ,[JustificativasDosDesviosFinanceiros]
+      ,[ResultadosOperacionais]
+      ,[Observação]
+      ,[Regulatório]
+      ,[EngenhariaImplantaçãoOperação]
+      ,[FundiárioAmbiental]
+      ,[OutrasQuestõesRelevantes]
+      ,[Gestão]
+      ,[SegurançaDoTrabalho]
+      ,[DataDeReferência]
+  FROM [sis_spe].[TE_ACOMP_EMPREENDIMENTO]
+GO
+
+INSERT INTO [sis_spe].[TT_ACOMPANHAMENTO_OBRA]
+           ([ID_OBRA]
+		   ,[ID_ACOMP_OBRA]
+           ,[DT_REFERENCIA]
+           ,[DT_ULT_REPROGRAMA_EO]
+           ,[DT_ULT_REPROGRAMA_LI]
+           ,[REALIZADO]
+           ,[PREVISTO_ANEEL]
+           ,[PREVISTO_REPROGRAMA])
+           
+    SELECT [ObraId] 
+       ,[ID]
+      ,[DataDeReferência]
+      ,[DataDeEOÚltimaReprogramação]
+      ,[DataDaLIÚltimaReprogramação]
+      ,[Realizado]
+	  ,[PrevistoANEEL]
+      ,[PrevistoReprogramação]
+     
+      
+  FROM [sis_spe].[TE_ACOMPANHAMENTO_OBRA]
+GO
+
+INSERT INTO [sis_spe].[TT_AGENTES_DA_GOVERNANÇA]
+           ([ID_AGENTE_GOVERNANCA]
+           ,[CARGO]
+           ,[FUNCAO]
+           ,[ID_NOME]
+           ,[ATIVO]
+           ,[MEMBRO]
+           ,[INICIO_MANDATO]
+           ,[FIM_MANDATO]
+           ,[GRP_ADMIN]
+           ,[ID_INDICADO_POR]
+           ,[ALERTA]
+           ,[ID_SUPLENTE]
+           ,[ATA]
+           ,[RES_EBRAS]
+           ,[RD]
+           ,[RCA]
+           ,[DT_RES_EBRAS]
+           ,[DT_RCA]
+           ,[DT_PRD]
+           ,[PRD]
+           ,[MANDATO_ATUAL]
+           ,[PRESIDENTE]
+           ,[ID_SPE])
+SELECT   [ID]
+       ,[Cargo]
+      ,[Função]
+      ,[NomeId]
+      ,[Ativo]
+      ,[MembroValue]
+      ,[MandatoInício]
+      ,[MandatoFim]
+      ,[GrupoAdministraçãoValue]
+      ,[IndicadorPorId]
+      ,[Alerta]
+      ,[SuplenteId]
+      ,CAST([Ata] AS VARCHAR (150)) [ATA]
+      ,[RESEletrobras]
+      ,[RD]
+      ,[RCA]
+      ,[DataRESEletrobrás]
+      ,[DataRCA]
+      ,[DataPRD]
+      ,[PRD]
+      ,[MandatoAtual]
+      ,[Presidente]
+	  ,[SPEId]
+
+  FROM [sis_spe].[TE_AGENTEGOV]
+GO
+
+INSERT INTO [sis_spe].[TT_APORTE_SPE]
+           ([ID_APORTE_SPE]
+           ,[DESC_ID_APORTE]
+           ,[FORMA_APORTE]
+           ,[SUBSCRITO]
+           ,[INTEGRALIZADO]
+           ,[SALDO_CAPITAL_AUTORIZADO]
+           ,[SALDO_EQUITY_ANO_CORRENTE]
+           ,[VL_TOTAL_APORTE]
+           ,[DT_APORTE_PROGRAMADA]
+           ,[PARECER]
+           ,[RCA]
+           ,[RD]
+           ,[RES_EBRAS]
+           ,[DT_RES_EBRAS]
+           ,[DT_RCA]
+           ,[DT_RD]
+           ,[ATA]
+           ,[PRD]
+           ,[DT_PRD]
+           ,[SOMA_PAGAMENTOS]
+           ,[CLASSIFICACAO_APORTE]
+           ,[MOTIVACAO_APORTE]
+           ,[ID_SPE])
+   
+
+SELECT  [ID]
+      ,[IdentificaçãoDoAporte]
+      ,[FormaDeAporteValue]
+      ,[Subscrito]
+      ,[Integralizado]
+      ,[SaldoDeCapitalAutorizado]
+      ,[SaldoEquityAnoCorrente]
+      ,[ValorTotalDoAporte]
+      ,[DataDoAporteProgramada]
+      ,[Parecer]
+      ,[RCA]
+      ,[RD]
+      ,[RESEletrobras]
+      ,[DataRESEletrobrás]
+      ,[DataRCA]
+      ,[DataRD]
+      --,[Ata]
+      ,CAST([Ata] AS VARCHAR(80)) [Ata]
+      ,CAST([PRD] AS VARCHAR(30)) [PRD]
+      ,[DataPRD]
+      ,[SomaDosPagamentosDoAporte]
+      ,[ClassificaçãoValue]
+      ,[MotivaçãoDoAporte]
+      ,[SPEId]
+      
+  FROM [sis_spe].[TE_APORTE]
+GO
+
+INSERT INTO [sis_spe].[TT_APORTE_PAGO]
+           ([ID_APORTE_PAGO]
+           ,[ID_APORTE_SPE]
+           ,[VL_REALIZADO]
+           ,[DT_REALIZADA]
+           ,[ID_ACIONISTA]
+           ,[ID_ACIONISTA_BENEFICIADO]
+           ,[QTDE_ACOES]
+           ,[CLASSIFICACAO])
+ 
+SELECT [ID]
+	  ,[AporteId]
+      ,[ValorRealizado]
+      ,[DataRealizada]
+      ,[AcionistaId]
+      ,[AcionistaBeneficiadoId]
+      ,[QuantidadeDeAções]
+      ,[ClassificaçãoValue]
+       
+  FROM [sis_spe].[TE_APORTE_PAGO]
+ GO
+
+INSERT INTO [sis_spe].[TT_ATIVIDADE]
+           ([ID_ATIVIDADE]
+           ,[ID_OBRA]
+           ,[ATIVIDADE_MARCO]
+           ,[CD_OBRA]
+           ,[DT_INICIO_ANEEL]
+           ,[DT_FIM_ANEEL]
+           ,[AVANCO_FISICO_ANEEL]
+           ,[DT_INICIO_REPROGRAMA]
+           ,[DT_FIM_REPROGRAMA]
+           ,[AVANCO_FISICO_REPROGRAMA]
+           ,[DT_INICIO_REALIZADO]
+           ,[DT_FIM_REALIZADO]
+           ,[AVANCO_FISICO_REALIZADO]
+           ,[ORDEM_ATIVIDADE]
+           ,[ID_GRUPO]
+           ,[TP_LICENCA]
+           ,[OBSERVACAO]
+           ,[SE_APLICA_SIGET]
+           ,[CD_ATIVIDADE])
+ 
+SELECT [ID]
+      ,[ObraId]
+      ,[AtividadeMarco]
+      ,[Código]
+      ,[DataInícioANEEL]
+      ,[DataTérminoANEEL]
+      ,[AvançoFísicoANEEL]
+      ,[DataInícioReprogramação]
+      ,[DataTérminoReprogramação]
+      ,[AvançoFísicoReprogramação]
+      ,[DataInícioRealizado]
+      ,[DataTérminoRealizado]
+      ,[AvançoFísicoRealizado]
+      ,[OrdemDaAtividade]
+      ,[GrupoId]
+      ,[TipoDeLicençaValue]
+      ,[Observação]
+      ,[SeAplicaSIGET]
+      ,[CódigoDaAtividade]
+
+  FROM [sis_spe].[TE_ATIVIDADE]
+GO
+
+INSERT INTO [sis_spe].[TT_AVANCO_FISICO]
+           ([ID_AVANCO_FISICO]
+           ,[DT_BASE]
+           ,[PERCENTUAL]
+           ,[ANEEL]
+           ,[REPROGRAMACAO]
+           ,[ID_OBRA]
+           ,[ID_PLANO_NEGOCIO])
+
+ 
+
+SELECT [ID]
+      ,[Data_Base]
+      ,[Percentual]
+      ,[ANEEL]
+      ,[Reprogramação]
+      ,[ObraId]
+	  ,[PlanoDeNegócioId]
+  FROM [sis_spe].[TE_AVANCOFISICO]
+GO
+
+ 
+ 
+INSERT INTO [sis_spe].[TT_BALANCO_PATRIMONIAL]
+           ([ID_BALANCO_PATRIMONIAL]
+           ,[TP_BALANCO_PATRIMONIAL]
+           ,[TRIMESTRE]
+           ,[ANO]
+           ,[ID_SPE])
+ 
+SELECT [ID]
+      ,[TipoBPValue]
+      ,[TrimestreValue]
+      ,[Ano]
+      ,[SPEId]
+  FROM [sis_spe].[TE_BP]
+GO
+
+USE [FURNAS_STG]
+GO
+
+INSERT INTO [sis_spe].[TT_CENARIO_PN]
+           ([ID_CENARIO_PN]
+           ,[CENARIO]
+           ,[TIR_ACIONISTA_REAL]
+           ,[TIR_PROJETO_REAL]
+           ,[TIR_DIVIDENDOS]
+           ,[TIR_ACIONISTA_NOMINAL]
+           ,[TIR_PROJETO_NOMINAL]
+           ,[ID_PLANO_NEGOCIO])
+
+SELECT [ID]
+      ,cast([Cenário] as varchar(35)) [Cenário]
+      ,[TIRAcionistaReal]
+      ,[TIRProjetoReal]
+      ,[TIRDividendos]
+      ,[TIRAcionistaNominal]
+      ,[TIRProjetoNominal]
+      ,[PlanoDeNegócioId]
+  FROM [sis_spe].[TE_CENARIOPN]
+ GO
+ 
+
+INSERT INTO [sis_spe].[TT_COMPLEXO]
+           ([ID_COMPLEXO]
+           ,[NM_COMPLEXO]
+           ,[SIGLA_COMPLEXO]
+           ,[DESC_COMPLEXO])
+ 
+
+SELECT [ID]
+      ,[NomeDoGrupo]
+      ,[Sigla]
+      ,[Descrição]
+  FROM [sis_spe].[TE_COMPLEXO]
+GO
+
+
+
+INSERT INTO [sis_spe].[TT_DISTRIBUIÇÃO_DE_LUCRO]
+           ([ID_DISTRIBUICAO_LUCRO]
+           ,[LUCRO_LIQUIDO_AGO]
+           ,[RESERVA_LEGAL_AGO]
+           ,[RETENCAO_AGO]
+           ,[DISTRIBUICAO_LUCRO_PROPOSTO_AGO]
+           ,[DT_LIMITE_PGTO_AGO]
+           ,[ALERTA]
+           ,[TP_DISTRIBUICAO_LUCRO]
+           ,[ANO_SPE]
+           ,[ID_SPE])
+ 
+ 
+SELECT [ID]
+      ,[LucroLíquidoAGO]
+      ,[ReservaLegalAGO]
+      ,[RetençõesAGO]
+      ,[DistrLucroPropostosAGO]
+      ,[DataLimitePagamentoAGO]
+      ,[Alerta]
+      ,[TipoDeDistribuiçãoDeLucroValue]
+      ,cast([Ano] as varchar(4)) [Ano]
+      ,[SPEId]
+  FROM [sis_spe].[TE_DISTRIBUICAOLUCRO]
+GO
+
+ 
+INSERT INTO [sis_spe].[TT_DRE]
+           ([ID_DRE]
+           ,[TP_DRE]
+           ,[TRIMESTRE]
+           ,[ANO]
+           ,[ID_SPE])
+ 
+SELECT [ID]
+      ,[TipoDREValue]
+      ,[TrimestreValue]
+      ,[Ano]
+      ,[SPEId]
+  FROM [sis_spe].[TE_DRE]
+GO
+
+
+
+INSERT INTO [sis_spe].[TT_EMPREENDIMENTO]
+           ([ID_EMPREENDIMENTO]
+           ,[NM_EMPREENDIMENTO]
+           ,[CD_EMPREENDIMENTO]
+           ,[DESC_EMPREENDIMENTO]
+           ,[RIO]
+           ,[NUM_CONCESSAO_AUTORIZACAO]
+           ,[ASSINATURA_CONCESSAO_AUTORIZ]
+           ,[PRAZO_CONCESSAO_AUTORIZ]
+           ,[TERMINO_CONCESSAO_AUTORIZ]
+           ,[ALERTA]
+           ,[DT_LEILAO]
+           ,[NUM_ANO_LEILAO]
+           ,[TP_LEILAO]
+           ,[TP_EMPREENDIMENTO]
+           ,[GRUPO_EMPREENDIMENTO]
+           ,[FASE_EMPREENDIMENTO]
+           ,[TAXA_ATRATIVIDADE]
+           ,[VL_RESSARCIMENTO_PROJETO]
+           ,[PROJETO_RESSARCIDO]
+           ,[DT_LIMITE_RESSARCIMENTO]
+           ,[ACR]
+           ,[ACL]
+           ,[ID_SPE])
+
+SELECT [ID]
+	  ,CAST([NomeDoEmpreendimento] AS VARCHAR(200)) [NomeDoEmpreendimento]
+      ,CAST([Código] AS VARCHAR(10)) [Código]
+      ,CAST([Descrição] AS VARCHAR(2500)) [Descrição]
+      ,CAST([Rio] AS VARCHAR(20)) [Rio]
+      ,CAST([NoDaConcessãoAutorização] AS VARCHAR(60)) [NoDaConcessãoAutorização]
+      ,[AssinaturaConcessãoAutorização]
+      ,[PrazoConcessãoAutorização]
+      ,[TérminoConcessãoAutorização]
+      ,[Alerta]
+      ,[DataDoLeilão]
+      ,CAST([NúmeroAnoLeilão] AS VARCHAR(40)) [NúmeroAnoLeilão]
+      ,CAST([TipoDeLeilãoValue] AS VARCHAR(15)) [TipoDeLeilãoValue]
+      ,[TipoEmpreendimentoId]
+      ,[GrupoEmpreendimentoId]
+      ,[FaseEmpreendimentoId]
+      ,[TaxaDeAtratividade]
+      ,[ValorDeRessarcimentoDeProjeto]
+      ,[ProjetoRessarcido]
+      ,[DataLimiteParaRessarcimento]
+      ,[ACR]
+      ,[ACL]
+      ,[SPEId]
+  FROM [sis_spe].[TE_EMPREENDIMENTO]
+GO
+
+
+INSERT INTO [sis_spe].[TT_EMPRESA]
+           ([ID_EMPRESA]
+           ,[NOME_EMPRESA]
+           ,[RAZAO_SOCIAL]
+           ,[DESCRICAO]
+           ,[ESTRANGEIRO]
+           ,[CNPJ]
+           ,[ID_ESTRANGEIRO]
+           ,[TP_LOGRADOURO]
+           ,[NM_LOGRADOURO]
+           ,[NUMERAL]
+           ,[COMPLEMENTO]
+           ,[BAIRRO]
+           ,[MUNICIPIO]
+           ,[UF]
+           ,[CEP]
+           ,[CLASSIFICACAO]
+           ,[HISTORICO])
+ 
+SELECT [ID]
+	  ,CAST([NomeDaEmpresa] AS VARCHAR(50)) [NomeDaEmpresa]
+      ,CAST([RazãoSocial] AS VARCHAR(100)) [RazãoSocial]
+      ,CAST([Descrição] AS VARCHAR(2000)) [Descrição]
+      ,CASE [EstrangeiroValue] WHEN 'SIM' THEN 1 WHEN 'NÃO' THEN 0 ELSE [EstrangeiroValue]END [EstrangeiroValue]
+      ,CAST([CNPJ] AS VARCHAR(20)) [CNPJ]
+      ,CAST([IdentificaçãoEstrangeiro] AS VARCHAR(30)) [IdentificaçãoEstrangeiro]
+      ,CAST([TipoLogradouroValue] AS VARCHAR(10)) [TipoLogradouroValue]
+      ,CAST([NomeDoLogradouro] AS VARCHAR(30)) [NomeDoLogradouro]
+      ,CAST([Numeral] AS VARCHAR(20)) [Numeral]
+      ,CAST([Complemento] AS VARCHAR(100)) [Complemento]
+      ,CAST([Bairro] AS VARCHAR(25)) [Bairro]
+      ,CAST([Município] AS VARCHAR(25)) [Município]
+      ,CAST([UFValue] AS VARCHAR(30)) [UFValue]
+      ,CAST([CEP] AS VARCHAR(15)) [CEP]
+      ,CAST([ClassificaçãoValue] AS VARCHAR(30)) [ClassificaçãoValue]
+      ,CAST([Histórico] AS VARCHAR(1000)) [Histórico]
+
+  FROM [sis_spe].[TE_EMPRESA]
+GO
+
+INSERT INTO [sis_spe].[TT_FINANCIAMENTO_SPE]
+           ([ID_FINANCIAMENTO_SPE]
+           ,[INSTITUICAO_FINANCEIRA]
+           ,[MODALIDADE]
+           ,[FONTE]
+           ,[VL_FINANCIADO_NOMINAL]
+           ,[DT_ASSINATURA]
+           ,[CARENCIA_JUROS]
+           ,[DT_INICIO_PGTO_JUROS]
+           ,[CARENCIA_PRINCIPAL]
+           ,[DT_APORTE_TERCEIRO]
+           ,[VL_APORTE_TERCEIRO]
+           ,[TEMPO_AMORTIZACAO]
+           ,[FORMA_AMORTIZACAO]
+           ,[TAXA_POS_FIXADA_JUROS]
+           ,[TAXA_PRE_FIXADA_SPREAD_AA]
+           ,[CUSTO_ESTRUTURACAO]
+           ,[DT_VENCIMENTO_SEGURO]
+           ,[ICSD]
+           ,[RCA]
+           ,[RD]
+           ,[DT_RCA]
+           ,[DT_RCA_EBRAS]
+           ,[ATA]
+           ,[PRD]
+           ,[DT_PRD]
+           ,[RCA_EBRAS]
+           ,[DT_RD]
+           ,[ESTRUTURA_CAPITAL_PROPRIO]
+           ,[ESTRUTURA_CAPITAL_TERCEIRO]
+           ,[DT_VIGENCIA]
+           ,[ID_SPE])
+   
+
+SELECT [ID]
+      ,CAST([InstituiçãoFinanceira] AS VARCHAR(100)) [InstituiçãoFinanceira]
+      ,CAST([ModalidadeValue] AS VARCHAR(20)) [ModalidadeValue]
+      ,CAST([FonteValue] AS VARCHAR(20)) [FonteValue]
+      ,[ValorFinanciadoNominal]
+      ,[DataDaAssinatura]
+      ,[CarênciaDeJuros]
+      ,[DataDeInicioPagamentoJuros]
+      ,[CarênciaPrincipal]
+      ,[DataDoAporteDeTerceiro]
+      ,[ValorDoAporteDeTerceiro]
+      ,[TempoDeAmortização]
+      ,CAST([FormaDeAmortizaçãoValue] AS VARCHAR(20)) [FormaDeAmortizaçãoValue]
+      ,[TaxaPósFixadaJurosId]
+      ,[TaxaPréFixadaSpreadAA]
+      ,[CustoDeEstruturação]
+      ,[DataDeVencimentoDoSeguro]
+      ,[ICSD]
+      ,CAST([RCA] AS VARCHAR(40)) [RCA]
+      ,CAST([RD] AS VARCHAR(40)) [RD]
+      ,[DataRCA]
+      ,[DataRCAEletrobras]
+      ,CAST([Ata] AS VARCHAR(40)) [Ata]
+      ,CAST([PRD] AS VARCHAR(4))[PRD]
+      ,[DataPRD]
+      ,CAST([RCAEletrobras] AS VARCHAR(40)) [RCAEletrobras]
+      ,[DataRD]
+      ,[EstruturaDeCapitalPróprio]
+      ,[EstruturaDeCapitalTerceiros]
+      ,[DataDeVigência]
+      ,[SPEId]
+  FROM [sis_spe].[TE_FINANC_SPE]
+GO
+ 
+ 
+
+INSERT INTO [sis_spe].[TT_FLUXO_DE_CAIXA]
+           ([ID_FLUXO_CAIXA]
+           ,[TP_FLUXO_CAIXA]
+           ,[TITULO]
+           ,[ANO]
+           ,[TRIMESTRE]
+           ,[DT_REFERENCIA]
+           ,[ID_SPE])
+
+
+SELECT [ID]
+      ,[TipoFCValue]
+      ,[Título]
+      ,[Ano]
+      ,[TrimestreValue]
+      ,[DataDeReferência]
+      ,[SPEId]
+  FROM [sis_spe].[TE_FLUXOCAIXA]
+GO
+
+
+ 
+INSERT INTO [sis_spe].[TT_FLUXO_DE_CAIXA_PN]
+           ([ID_FLUXO_CAIXA_PN]
+           ,[ID_SPE]
+           ,[TP_FLUXO_CAIXA]
+           ,[TITULO]
+           ,[ANO]
+           ,[TRIMESTRE]
+           ,[DT_REFERENCIA]
+           ,[ID_PLANO_NEGOCIO])
+ 
+ 
+SELECT [ID]
+       ,null
+      ,[TipoFCValue]
+      ,[Título]
+      ,[Ano]
+      ,[TrimestreValue]
+      ,[DataDeReferência]
+      ,[PlanoDeNegócioId]
+      
+  FROM [sis_spe].[TE_FLUXOCAIXAPN]
+ GO
+
+INSERT INTO [sis_spe].[TT_INDICADOR_SPE]
+           ([ID_INDICADOR]
+           ,[ID_TP_INDICADOR]
+           ,[VALOR]
+           ,[DT_REFERENCIA]
+           ,[ID_SPE])
+ 
+ 
+
+SELECT [ID]
+      ,[TipoDeIndicador]
+      ,[Valor]
+      ,[DataDeReferência]
+      ,[SPEId]
+  FROM [sis_spe].[TE_INDICADOR_SPE]
+ 
+GO
+
+
+
+INSERT INTO [sis_spe].[TT_ITEM_BP]
+           ([ID_ITEM_BP]
+           ,[VALOR]
+           ,[ORDEM]
+           ,[ID_NIVEL1_BP]
+           ,[ID_NIVEL2_BP]
+           ,[ID_NIVEL3_BP]
+           ,[ID_BALANCO_PATRIMONIAL])
+ 
+
+ 
+
+SELECT [ID]
+      ,[Valor]
+      ,[Ordem]
+	  ,[Nível1BPId]
+      ,[Nível2BPId]
+      ,[Nível3BPId]
+	  ,[BPId]
+
+  FROM [sis_spe].[TE_ITEMBP]
+GO
+
+ 
+
+INSERT INTO [sis_spe].[TT_ITEM_DRE]
+           ([ID_ITEM_DRE]
+           ,[VALOR]
+           ,[ORDEM]
+           ,[ID_DRE]
+           ,[ID_NIVEL1_DRE]
+           ,[ID_NIVEL2_DRE]
+           ,[ID_NIVEL3_DRE])
+ 
+
+SELECT [ID]
+      ,[Valor]
+      ,[Ordem]
+	  ,[DREId]
+      ,[Nível1DREId]
+      ,[Nível2DREId]
+      ,[Nível3DREId]
+
+  FROM [sis_spe].[TE_ITEMDRE]
+GO
+
+
+
+ 
+INSERT INTO [sis_spe].[TT_ITEM_FC]
+           ([ID_ITEM_FC]
+           ,[VALOR]
+           ,[ID_FLUXO_CAIXA]
+           ,[ID_NIVEL1_FC]
+           ,[ID_NIVEL2_FC]
+           ,[ID_NIVEL3_FC])
+ 
+ 
+
+SELECT distinct [ID]
+      ,[Valor]
+	  ,[FCId]
+	  ,[Nível1FCId]
+      ,[Nível2FCId]
+      ,[Nível3FCId]
+      
+  FROM [sis_spe].[TE_ITEMFC]
+ GO
+
+ 
+INSERT INTO [sis_spe].[TT_ITEM_FC_PN]
+           ([ID_ITEM_FC_PN]
+           ,[VALOR]
+           ,[ID_NIVEL1_FC]
+           ,[ID_FLUXO_CAIXA_PN]
+           ,[ID_NIVEL2_FC]
+           ,[ID_NIVEL3_FC])
+
+
+SELECT [ID]      
+      ,[Valor]
+	  ,[Nível1FCId]      
+	  ,[FluxoDeCaixaPNId]
+      ,[Nível2FCId]
+      ,[Nível3FCId]
+
+  FROM [sis_spe].[TE_ITEMFCPN]
+GO
+
+
+INSERT INTO [sis_spe].[TT_LOCAL_EMPREENDIMENTO]
+           ([ID_LOCAL]
+           ,[ID_EMPREENDIMENTO]
+           ,[CIDADE]
+           ,[UF])
+  
+SELECT [ID]
+      ,[EmpreendimentoId]
+      ,CAST([Cidade] AS VARCHAR(30)) [Cidade]
+      ,CAST([UFValue] AS VARCHAR(30)) [UFValue]
+ 
+  FROM [sis_spe].[TE_LOCAL_EMPREENDIMENTO]
+GO
+
+INSERT INTO [sis_spe].[TT_MUTAÇÃO_PL]
+           ([ID_MUTACAO_PL]
+           ,[DT_REFERENCIA]
+           ,[CAPITAL_SOCIAL]
+           ,[RESERVA_LEGAL]
+           ,[RETENCAO]
+           ,[LUCRO_ACUMULADO]
+           ,[TOTAL]
+           ,[LUCRO_LIQUIDO]
+           ,[DISTRIBUIÇÃO_LUCRO]
+           ,[ID_SPE])
+
+
+SELECT [ID]
+      ,[DataReferência]
+      ,[CapitalSocial]
+      ,[ReservaLegal]
+      ,[Retenção]
+      ,[LucroAcumulado]
+      ,[Total]
+      ,[LucroLíquido]
+      ,[DistribuiçãoLucro]
+      ,[SPEId]
+  FROM [sis_spe].[TE_MUTACAO]
+GO
+
+
+INSERT INTO [sis_spe].[TT_NIVEL1_BP]
+           ([ID_NIVEL1_BP]
+           ,[TITULO_NIVEL1])
+ 
+
+SELECT [ID]
+      ,[Título]
+  FROM [sis_spe].[TE_NIVEL1BP]
+GO
+
+ 
+
+INSERT INTO [sis_spe].[TT_NIVEL1_DRE]
+           ([ID_NIVEL1_DRE]
+           ,[TITULO_NIVEL1])
+
+SELECT [ID]
+      ,[Título]
+  FROM [sis_spe].[TE_NIVEL1DRE]
+GO
+
+
+INSERT INTO [sis_spe].[TT_NIVEL1_FC]
+           ([ID_NIVEL1_FC]
+           ,[TITULO_NIVEL1]
+           ,[ORDEM])
+
+SELECT [ID]
+      ,[Título]
+      ,[Ordem]
+  FROM [sis_spe].[TE_NIVEL1FC]
+GO
+
+
+
+INSERT INTO [sis_spe].[TT_NIVEL2_BP]
+           ([ID_NIVEL2_BP]
+           ,[TITULO_NIVEL2]
+           ,[ID_NIVEL1_BP])
+ 
+SELECT [ID]
+      ,[Título]
+      ,[Nível1BPId]
+      
+ FROM [sis_spe].[TE_NIVEL2BP]
+ GO
+
+
+INSERT INTO [sis_spe].[TT_NIVEL2_DRE]
+           ([ID_NIVEL2_DRE]
+           ,[TITULO_NIVEL2]
+           ,[ID_NIVEL1_DRE])
+ 
+SELECT [ID]
+      ,[Título]
+      ,[Nível1DREId]
+  FROM [sis_spe].[TE_NIVEL2DRE]
+GO
+
+
+INSERT INTO [sis_spe].[TT_NIVEL2_FC]
+           ([ID_NIVEL2_FC]
+           ,[TITULO_NIVEL2]
+           ,[ORDEM]
+           ,[ID_NIVEL1_FC])
+
+
+SELECT [ID]
+      ,[Título]
+      ,[Ordem]
+      ,[Nivel1FCId]
+  FROM [sis_spe].[TE_NIVEL2FC]
+GO
+
+
+
+  
+
+INSERT INTO [sis_spe].[TT_NIVEL3_BP]
+           ([ID_NIVEL3_BP]
+           ,[TITULO_NIVEL3]
+           ,[ID_NIVEL2_BP])
+ 
+
+SELECT [ID]
+      ,[Título]
+      ,[Nível2BPId]
+  FROM [sis_spe].[TE_NIVEL3BP]
+GO
+
+
+ 
+INSERT INTO [sis_spe].[TT_NIVEL3_DRE]
+           ([ID_NIVEL3_DRE]
+           ,[TITULO_NIVEL3]
+           ,[ID_NIVEL2_DRE])
+ 
+
+SELECT [ID]
+      ,[Título]
+      ,[Nível2DREId]
+  FROM [sis_spe].[TE_NIVEL3DRE]
+ GO
+
+
+INSERT INTO [sis_spe].[TT_NIVEL3_FC]
+           ([ID_NIVEL3_FC]
+           ,[TITULO_NIVEL3]
+           ,[ORDEM]
+           ,[ID_NIVEL2_FC])
+ 
+SELECT [ID]
+      ,[Título]
+      ,[Ordem]
+      ,[Nivel2FCId]
+  FROM [sis_spe].[TE_NIVEL3FC]
+GO
+
+INSERT INTO [sis_spe].[TT_OBRA]
+           ([ID_OBRA]
+           ,[NM_OBRA]
+           ,[CD_OBRA]
+           ,[CD_OBRA_ANEEL]
+           ,[ESTADO_FEDERACAO]
+           ,[CIDADE]
+           ,[LOCALIZACAO]
+           ,[GEOCOORDENADAS]
+           ,[REGIAO]
+           ,[CD_SIGET_OBRA]
+           ,[CD_SIGET_SPE]
+           ,[PESO_OBRA]
+           ,[ID_EMPREENDIMENTO])
+ 
+
+
+SELECT [ID]
+      ,CAST([NomeDaObra] AS VARCHAR(200)) [NomeDaObra]
+      ,CAST([CódigoDaObra] AS VARCHAR(15)) [CódigoDaObra]
+      ,CAST([CódigoDaObraANEEL] AS VARCHAR(30)) [CódigoDaObraANEEL]
+      ,CAST([UFValue] AS VARCHAR(20)) [UFValue]
+      ,CAST([Cidade] AS VARCHAR(100)) [Cidade]
+      ,CAST([LocalizaçãoDaObra] AS VARCHAR(400)) [LocalizaçãoDaObra]
+      ,CAST([CoordenadasGeográficas] AS VARCHAR(120)) [CoordenadasGeográficas]
+      ,CAST([RegiaoValue] AS VARCHAR(20)) [RegiaoValue]
+      ,[CódigoSIGETObra]
+      ,[CódigoSIGETSPE]
+      ,[PesoDaObra]
+      ,[EmpreendimentoId]
+      
+  FROM [sis_spe].[TE_OBRA]
+GO
+
+
+INSERT INTO [sis_spe].[TT_PAGAMENTO_DISTRIBUICAO_LUCRO]
+           ([ID_PAGAMENTO_DISTRIBUIÇAO_LUCRO]
+           ,[ID_ACIONISTA]
+           ,[DT_PAGAMENTO]
+           ,[DESC_PAGAMENTO]
+           ,[VALOR_PAGO]
+           ,[ID_DIVIDENDO]
+           ,[TP_DISTRIBUICAO_LUCRO]
+           ,[ID_REMUNERACAO_GLOBAL])
+ 
+SELECT [ID]
+      ,[AcionistaId]
+      ,[DataDoPagamento]
+      ,CAST([DescriçãoDoPagamento] AS VARCHAR(2000))[DescriçãoDoPagamento]
+      ,[ValorPago]
+      ,[DividendoId]  /* verdadeiro id de DISTRIBUIÇÃO DE LUCRO. NÃO SE ALTERA CHAVE NO SHAREPOINT... */
+      ,CAST([TipoDeDistribuiçãoDeLucroValue] AS VARCHAR(30))[TipoDeDistribuiçãoDeLucroValue]
+      ,NULL [ID_REMUNERACAO_GLOBAL] /* atributo incorreto DE MODELAGAEM ANTERIOR. Para não alterar modelo será carregado com nulo*/
+  FROM [sis_spe].[TE_PGTO_DIST_LUCRO]
+GO
+ 
+
+INSERT INTO [sis_spe].[TT_PARTICIPACAO_SPE]
+           ([ID_PARTICIPACAO_SPE]
+           ,[ID_SPE]
+           ,[ID_EMPRESA]
+           ,[PARTICIPACAO]
+           ,[GRAU_INFLUENCIA]
+           ,[DATA_INICIO]
+           ,[DATA_FIM]
+           ,[ATIVO]
+           ,[OBSERVACAO],[ACIONISTA])
+SELECT DISTINCT [ID]
+      ,[SPEId]
+      ,[EmpresaId]
+      ,[Participação]
+      ,[GrauDeInfluência]
+      ,[DataInício]
+      ,[DataFim]
+      ,[Ativo]
+      ,CAST([Observação] AS VARCHAR(2000)) [Observação],[Acionista]
+  FROM [sis_spe].[TE_PARTICIPACAO_SPE]  
+GO
+
+INSERT INTO [sis_spe].[TT_PLANO_NEGOCIO]
+           ([ID_PLANO_NEGOCIO]
+           ,[REVISAO_PN]
+           ,[DT_REVISAO_PN]
+           ,[DT_LI]
+           ,[DT_LO]
+           ,[DT_EO]
+           ,[DT_ASSINATURA_CONTRATO]
+           ,[DT_INICIO_OBRA]
+           ,[DT_FINAL_CONCESSAO]
+           ,[DT_INICIO_RECEITA_SUPR_ENERGIA]
+           ,[INVESTIMENTO_TOTAL_VL_CORRENTE]
+           ,[INVESTIMENTO_TOTAL_VL_CONSTANTE]
+           ,[INVESTIMENTO_DT_BASE]
+           ,[ESTRUTURA_CAPITAL_PROPRIO]
+           ,[ESTRUTURA_CAPITAL_TERCEIROS]
+           ,[PN0]
+           ,[PLANOMAISATUAL]
+           ,[RD]
+           ,[RCA]
+           ,[PN_INDICADORES]
+           ,[RCA_EBRAS]
+           ,[DT_RCA_EBRAS]
+           ,[DT_RCA]
+           ,[DT_RD]
+           ,[ATA]
+           ,[PRD]
+           ,[DT_PRD]
+           ,[DT_LP]
+           ,[VALORACAO]
+           ,[NUMERO_PN]
+           ,[ID_EMPREENDIMENTO])
+          
+           
+
+SELECT [ID]
+      ,CAST([RevisãoDoPN] AS VARCHAR(40)) [RevisãoDoPN]
+      ,[DataDaRevisãoDoPN]
+      ,[DataLI]
+      ,[DataLO]
+      ,[DataEO]
+      ,[DataDeAssinaturaDoContrato]
+      ,[DataInícioDaObra]
+      ,[DataFinalDaConcessão]
+      ,[DataInícioReceitaSuprimentoEnergia]
+      ,[InvestimentoTotalValorCorrente]
+      ,[InvestimentoTotalValorConstante]
+      ,[InvestimentoDataBase]
+      ,[EstruturaDeCapitalPróprio]
+      ,[EstruturaDeCapitalTerceiros]
+      ,[PN0]
+      ,[PLANOMAISATUAL]
+      ,CAST([RD] AS VARCHAR(60)) [RD]
+      ,CAST([RCA] AS VARCHAR(60)) [RCA]
+      ,[PNIndicadores]
+      ,CAST([RCAEletrobras] AS VARCHAR(60)) [RCAEletrobras]
+      ,[DataRCAEletrobrás]
+      ,[DataRCA]
+      ,[DataRD]
+      ,CAST([Ata] AS VARCHAR(50)) [Ata]
+      ,CAST([PRD] AS VARCHAR(50)) [PRD]
+      ,[DataPRD]
+      ,[DataLP]
+      ,[Valoração]
+      ,[NúmeroPN]
+      ,[EmpreendimentoId]
+  FROM [sis_spe].[TE_PLANO_NEGOCIO]
+GO
+
+
+
+INSERT INTO [sis_spe].[TT_RAP]
+           ([ID_RAP]
+           ,[IDENTIFICACAO]
+           ,[VALOR]
+           ,[DT_BASE]
+           ,[ID_PLANO_NEGOCIO])
+
+
+SELECT [ID]
+      ,[Identificação]
+      ,[Valor]
+      ,[Data_Base]
+      ,[PlanoDeNegócioId]
+      
+  FROM [sis_spe].[TE_RAP]
+GO
+
+
+ 
+
+INSERT INTO [sis_spe].[TT_REMUNERACAO_GLOBAL]
+           ([ID_REMUNERACAO_GLOBAL]
+           ,[GRUPO]
+           ,[DT_INICIO]
+           ,[DT_FIM]
+           ,[VALOR]
+           ,[ID_SPE])
+ 
+SELECT [ID]
+      ,CAST([Grupo] AS VARCHAR(50)) [Grupo]
+      ,[DataInicio]
+      ,[DataFim]
+      ,[Valor]
+      ,[SPEId]
+      
+  FROM [sis_spe].[TE_REMUNERACAO_GLOBAL]
+GO
+
+INSERT INTO [sis_spe].[TT_RESULTADO_FINANCEIRO_PN]
+           ([ID_RESULTADO_FINANCEIRO_PN]
+           ,[ANO]
+           ,[RECEITA_LIQUIDA]
+           ,[EBTIDA]
+           ,[LUCRO_LIQUIDO]
+           ,[ID_PLANO_NEGOCIO])
+ 
+SELECT [ID]
+      ,[Ano]
+      ,[ReceitaLíquida]
+      ,[Ebtida]
+      ,[LucroLíquido]
+      ,[PlanoDeNegócioId]
+     
+  FROM [sis_spe].[TE_RESULTADOFINANCEIRO]
+GO
+
+
+INSERT INTO [sis_spe].[TT_QUANTIFICACAO_OBRA]
+           ([ID_QUANTIFICACAO]
+           ,[ID_SPE]
+           ,[ID_OBRA]
+           ,[UF]
+           ,[POTENCIA_INSTALADA_MW]
+           ,[POTENCIA_UNITARIA_MEDIA_MW]
+           ,[GARANTIA_FISICA_MWMED]
+           ,[QTDE_UGs]
+           ,[TP_UG]
+           ,[FABRICANTE]
+           ,[AREA_INUNDADA_KM]
+           ,[TENSAO]
+           ,[EXTENSAO_POR_UF]
+           ,[EXTENSAO_TOTAL]
+           ,[QTDE_CIRCUITOS]
+           ,[DESCRICAO]
+           ,[NIVEL_TENSAO]
+           ,[CAPACIDADE_TRANSFORMACAO]
+           ,[COMBUSTIVEL]
+           ,[QTDE_OPGW])
+ 
+
+SELECT distinct
+	   [ID]
+      ,A.ID_SPE [SPEId]      
+      ,[ObraId]	  
+	  ,CAST([UFValue] AS VARCHAR(30)) [UFValue] 
+      ,[PotênciaInstaladaMW]
+      ,[PotênciaUnitáriaMédiaMW]
+      ,[GarantiaFísicaMWmed]
+      ,[QuantidadeDeUGs]
+	  ,CAST([TipoDeUG] AS VARCHAR(30)) [TipoDeUG]
+	  ,CAST([Fabricante] AS VARCHAR(30)) [Fabricante]
+      ,[ÁreaInundadaKm]
+      ,[Tensão]
+      ,[ExtensãoPorUF]
+      ,[ExtensãoTotal]
+      ,[QtdCircuitos]
+	  ,CAST([Descrição] AS VARCHAR(300)) [Descrição]
+	  ,CAST([NívelDeTensão] AS VARCHAR(30)) [NívelDeTensão]
+      ,[CapacidadeDeTransformação]
+	  ,CAST([Combustivel] AS VARCHAR(50)) [Combustivel]
+      ,[QuantidadeOPGW]
+ 
+  FROM (SELECT C.SPEId ID_SPE, A.* FROM [sis_spe].[TE_QUANTIFICACAO_OBRA] A
+LEFT JOIN [sis_spe].[TE_OBRA] B ON B.[ID] = A.ObraId
+LEFT JOIN [sis_spe].[TE_EMPREENDIMENTO] C ON C.ID = B.EmpreendimentoId)   A 
+GO
+
+INSERT INTO [sis_spe].[TT_SPE]
+           ([ID_SPE]
+           ,[APELIDO]
+           ,[CD_SPE]
+           ,[TP_SPE]
+           ,[NM_SPE]
+           ,[CNPJ]
+           ,[NIRE]
+           ,[INSC_ESTADUAL]
+           ,[INSC_MUNICIPAL]
+           ,[DT_CONST_SPE]
+           ,[CAPITAL_SOCIAL_AUTORIZADO]
+           ,[CAPITAL_SOCIAL_INTEGRAL]
+           ,[CAPITAL_APORTADO_TOTAL]
+           ,[RD_FURNAS]
+           ,[DT_PRD]
+           ,[DT_RCA_EBRAS]
+           ,[DT_RCA_FURNAS]
+           ,[DT_RD_FURNAS]
+           ,[RCA_FURNAS]
+           ,[RCA_EBRAS]
+           ,[PRD]
+           ,[VL_TOTAL_APORTE_PAGO]
+           ,[QTD_FUNCIONARIOS]
+           ,[ID_COMPLEXO]
+	, [Mestre])
+ 
+SELECT [ID]
+      ,[Apelido]
+	  ,CAST([CódigoDaSPE] AS VARCHAR(6)) [CódigoDaSPE]
+	  ,CAST([TipoDeSPEValue] AS VARCHAR(20)) [TipoDeSPEValue]
+	  ,CAST([NomeDaSPE] AS VARCHAR(60)) [NomeDaSPE]      
+      ,CAST([CNPJ] AS VARCHAR(20))[CNPJ]
+      ,CAST([NIRE] AS VARCHAR(20))[NIRE]
+      ,CAST([InscriçãoEstadual] AS VARCHAR(20)) [InscriçãoEstadual]
+      ,CAST([InscriçãoMunicipal] AS VARCHAR(20)) [InscriçãoMunicipal]
+      ,[DataDeConstituiçãoDaSPE]
+      ,[CapitalSocialAutorizado]
+      ,[CapitalSocialIntegralizado]
+      ,[CapitalAportadoTotal]
+      ,CAST([RD] AS VARCHAR(60)) [RD]
+      ,[DataPRD]
+      ,[DataRCAEletrobrás]
+      ,[DataRCA]
+      ,[DataRD]
+      ,CAST([RCA] AS VARCHAR(60)) [RCA]
+      ,CAST([RCAEletrobras] AS VARCHAR(300))  [RCAEletrobras]
+      ,CAST([PRD] AS VARCHAR(30)) [PRD]
+      ,[ValorTotalAportePago]
+      ,[QuantidadeDeFuncionarios]
+      ,[ComplexoId]
+	, [Consolidador]
+
+  FROM [sis_spe].[TE_SPE]
+GO
+
+ 
+INSERT INTO [sis_spe].[TT_GERACAO_CAIXA]
+           ([ID_GERACAO_CAIXA]
+           ,[ID_SPE]
+           ,[DT_GERACAO_CAIXA]
+           ,[VALOR])
+
+SELECT distinct
+	   [ID]
+      ,[SPEId]
+      ,[Data]
+      ,[Valor]
+  FROM [sis_spe].[TE_GERACAO_CAIXA]
+GO
+
+
+INSERT INTO [sis_spe].[TT_GERACAO_CAIXA_PN]
+           ([ID_GERACAO_CAIXA]
+           ,[ID_PLANO_NEGOCIO]
+           ,[DT_GERACAO_CAIXA]
+           ,[VALOR])
+ 
+SELECT [ID]
+      ,[PlanoDeNegócioId]
+      ,[Data]
+      ,[Valor]
+  FROM [sis_spe].[TE_GERACAO_CAIXA_PN]
+GO
+
+INSERT INTO [Furnas_STG].[sis_spe].[TT_PONTODEATENCAO_SPE]
+           ([ID_PontoDeAtenção]
+           ,[Governança_PontoDeAtenção]
+           ,[Governança_AçõesDoGestor]
+           ,[Reporte_PontoDeAtenção]
+           ,[Reporte_AçõesDoGestor]
+           ,[ModeloDeNegócio_PontoDeAtenção]
+           ,[ModeloDeNegócio_AçõesDoGestor]
+           ,[EngenhariaConstrução_PontoDeAtenção]
+           ,[EngenhariaConstrução_AçõesDoGestor]
+           ,[Crédito_PontoDeAtenção]
+           ,[Crédito_AçõesDoGestor]
+           ,[Jurídico_PontoDeAtenção]
+           ,[Jurídico_AçõesDoGestor]
+           ,[GeraçãoComercializaçãoEnergia_PontoDeAtenção]
+           ,[GeraçãoComercializaçãoEnergia_AçõesDoGestor]
+           ,[Liquidez_PontoDeAtenção]
+           ,[Liquidez_AçõesDoGestor]
+,[ID_ACOMP_EMPREENDIMENTO])
+SELECT [ID_PontoDeAtenção]
+      ,[Governança_PontoDeAtenção]
+      ,[Governança_AçõesDoGestor]
+      ,[Reporte_PontoDeAtenção]
+      ,[Reporte_AçõesDoGestor]
+      ,[ModeloDeNegócio_PontoDeAtenção]
+      ,[ModeloDeNegócio_AçõesDoGestor]
+      ,[EngenhariaConstrução_PontoDeAtenção]
+      ,[EngenhariaConstrução_AçõesDoGestor]
+      ,[Crédito_PontoDeAtenção]
+      ,[Crédito_AçõesDoGestor]
+      ,[Jurídico_PontoDeAtenção]
+      ,[Jurídico_AçõesDoGestor]
+      ,[GeraçãoComercializaçãoEnergia_PontoDeAtenção]
+      ,[GeraçãoComercializaçãoEnergia_AçõesDoGestor]
+      ,[Liquidez_PontoDeAtenção]
+      ,[Liquidez_AçõesDoGestor]
+,[ID_ACOMP_EMPREENDIMENTO]
+  FROM [Furnas_STG].[sis_spe].[TE_PONTODEATENCAO_SPE]
+GO

@@ -1,0 +1,195 @@
+Information: 0x40016041 at SPE_CargaStagingeDW: The package is attempting to configure from the XML file "D:\Projetos\DDSNA\Integration Services\PPF1\SPE_CargaStagingeDW\SSIS_DESENV_ETC71021\SSIS_DESENV_ETC71021\SPE_CargaStagingeDW.dtsConfig".
+SSIS package "D:\Projetos\DDSNA\Integration Services\PPF1\SPE_CargaStagingeDW\SSIS_DESENV_ETC71021\SSIS_DESENV_ETC71021\SPE_CargaStagingeDW.dtsx" starting.
+Information: 0x40016041 at SPE_CargaStagingeDW: The package is attempting to configure from the XML file "D:\Projetos\DDSNA\Integration Services\PPF1\SPE_CargaStagingeDW\SSIS_DESENV_ETC71021\SSIS_DESENV_ETC71021\SPE_CargaStagingeDW.dtsConfig".
+Information: 0x4004300A at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 2, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 3, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 4, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 5, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 6, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 A, DW NIVEL1 BP [105]: The final commit for the data insertion in "DW NIVEL1 BP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 A, DW NIVEL1 BP [105]: The final commit for the data insertion  in "DW NIVEL1 BP" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 A, DW NIVEL1 FC [147]: The final commit for the data insertion in "DW NIVEL1 FC" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 A, DW NIVEL1 FC [147]: The final commit for the data insertion  in "DW NIVEL1 FC" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 A, DW EMPRESA [54]: The final commit for the data insertion in "DW EMPRESA" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 A, DW COMPLEXO [29]: The final commit for the data insertion in "DW COMPLEXO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 A, DW EMPRESA [54]: The final commit for the data insertion  in "DW EMPRESA" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 A, DW COMPLEXO [29]: The final commit for the data insertion  in "DW COMPLEXO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 A, DW NIVEL1 DRE [126]: The final commit for the data insertion in "DW NIVEL1 DRE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 A, DW NIVEL1 DRE [126]: The final commit for the data insertion  in "DW NIVEL1 DRE" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: "DW COMPLEXO" wrote 98 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: "DW EMPRESA" wrote 208 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: "DW NIVEL1 BP" wrote 2 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: "DW NIVEL1 DRE" wrote 14 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: "DW NIVEL1 FC" wrote 25 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 1 A, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 B, DW NIVEL2 BP [2]: The final commit for the data insertion in "DW NIVEL2 BP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 B, DW NIVEL2 BP [2]: The final commit for the data insertion  in "DW NIVEL2 BP" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 B, DW NIVEL2 DRE [25]: The final commit for the data insertion in "DW NIVEL2 DRE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 B, DW NIVEL2 DRE [25]: The final commit for the data insertion  in "DW NIVEL2 DRE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 B, DW NIVEL2 FC [48]: The final commit for the data insertion in "DW NIVEL2 FC" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 B, DW NIVEL2 FC [48]: The final commit for the data insertion  in "DW NIVEL2 FC" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: "DW NIVEL2 BP" wrote 5 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: "DW NIVEL2 DRE" wrote 48 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: "DW NIVEL2 FC" wrote 44 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 1 B, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 C, DW NIVEL3 DRE [25]: The final commit for the data insertion in "DW NIVEL3 DRE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 C, DW NIVEL3 DRE [25]: The final commit for the data insertion  in "DW NIVEL3 DRE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 C, DW NIVEL3 FC [48]: The final commit for the data insertion in "DW NIVEL3 FC" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 C, DW NIVEL3 FC [48]: The final commit for the data insertion  in "DW NIVEL3 FC" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 1 C, DW NIVEL3 BP [2]: The final commit for the data insertion in "DW NIVEL3 BP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 1 C, DW NIVEL3 BP [2]: The final commit for the data insertion  in "DW NIVEL3 BP" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: "DW NIVEL3 BP" wrote 52 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: "DW NIVEL3 DRE" wrote 0 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: "DW NIVEL3 FC" wrote 4 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 1 C, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 2, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 2, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 2, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 2, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 2, DW SPE [2]: The final commit for the data insertion in "DW SPE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 2, DW SPE [2]: The final commit for the data insertion  in "DW SPE" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 2, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 2, SSIS.Pipeline: "DW SPE" wrote 205 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 2, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 3, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 3, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 3, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 3, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW_GERAÇÃO DE CAIXA [795]: The final commit for the data insertion in "DW_GERAÇÃO DE CAIXA" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW_GERAÇÃO DE CAIXA [795]: The final commit for the data insertion  in "DW_GERAÇÃO DE CAIXA" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW FINANC SPE [555]: The final commit for the data insertion in "DW FINANC SPE" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW DISTRIB LUCRO [428]: The final commit for the data insertion in "DW DISTRIB LUCRO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW FINANC SPE [555]: The final commit for the data insertion  in "DW FINANC SPE" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW DISTRIB LUCRO [428]: The final commit for the data insertion  in "DW DISTRIB LUCRO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW INDICADOR SPE [665]: The final commit for the data insertion in "DW INDICADOR SPE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW INDICADOR SPE [665]: The final commit for the data insertion  in "DW INDICADOR SPE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW REMUNERA GLOBAL [766]: The final commit for the data insertion in "DW REMUNERA GLOBAL" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW REMUNERA GLOBAL [766]: The final commit for the data insertion  in "DW REMUNERA GLOBAL" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW BP [401]: The final commit for the data insertion in "DW BP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW BP [401]: The final commit for the data insertion  in "DW BP" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW MUTACAO PL [692]: The final commit for the data insertion in "DW MUTACAO PL" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW MUTACAO PL [692]: The final commit for the data insertion  in "DW MUTACAO PL" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW DRE [465]: The final commit for the data insertion in "DW DRE" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW EMPREENDIMENTO [492]: The final commit for the data insertion in "DW EMPREENDIMENTO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW DRE [465]: The final commit for the data insertion  in "DW DRE" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW EMPREENDIMENTO [492]: The final commit for the data insertion  in "DW EMPREENDIMENTO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW PARTICIP SPE [729]: The final commit for the data insertion in "DW PARTICIP SPE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW PARTICIP SPE [729]: The final commit for the data insertion  in "DW PARTICIP SPE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW FLUXO CAIXA [634]: The final commit for the data insertion in "DW FLUXO CAIXA" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW FLUXO CAIXA [634]: The final commit for the data insertion  in "DW FLUXO CAIXA" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, DW APORTE SPE [338]: The final commit for the data insertion in "DW APORTE SPE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, DW APORTE SPE [338]: The final commit for the data insertion  in "DW APORTE SPE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 3, Destino OLE DB 1 [200]: The final commit for the data insertion in "Destino OLE DB 1" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 3, Destino OLE DB 1 [200]: The final commit for the data insertion  in "Destino OLE DB 1" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 3, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "Destino OLE DB 1" wrote 5826 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW APORTE SPE" wrote 1882 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW BP" wrote 2149 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW DISTRIB LUCRO" wrote 244 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW DRE" wrote 1817 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW EMPREENDIMENTO" wrote 216 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW FINANC SPE" wrote 208 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW FLUXO CAIXA" wrote 5374 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW INDICADOR SPE" wrote 40 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW MUTACAO PL" wrote 291 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW PARTICIP SPE" wrote 609 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW REMUNERA GLOBAL" wrote 392 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 3, SSIS.Pipeline: "DW_GERAÇÃO DE CAIXA" wrote 2 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 3, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 4, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 4, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 4, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 4, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW OBRA [190]: The final commit for the data insertion in "DW OBRA" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW OBRA [190]: The final commit for the data insertion  in "DW OBRA" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW PAGAM DISTRIB LUCRO [233]: The final commit for the data insertion in "DW PAGAM DISTRIB LUCRO" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW PLANO NEGOCIO [267]: The final commit for the data insertion in "DW PLANO NEGOCIO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW PAGAM DISTRIB LUCRO [233]: The final commit for the data insertion  in "DW PAGAM DISTRIB LUCRO" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW PLANO NEGOCIO [267]: The final commit for the data insertion  in "DW PLANO NEGOCIO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW LOCAL EMPREENDIM [165]: The final commit for the data insertion in "DW LOCAL EMPREENDIM" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW LOCAL EMPREENDIM [165]: The final commit for the data insertion  in "DW LOCAL EMPREENDIM" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW APORTE PAGO [41]: The final commit for the data insertion in "DW APORTE PAGO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW APORTE PAGO [41]: The final commit for the data insertion  in "DW APORTE PAGO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW ITEM BP [74]: The final commit for the data insertion in "DW ITEM BP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW ITEM BP [74]: The final commit for the data insertion  in "DW ITEM BP" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW ITEM DRE [105]: The final commit for the data insertion in "DW ITEM DRE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW ITEM DRE [105]: The final commit for the data insertion  in "DW ITEM DRE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 4, DW ITEM FC [136]: The final commit for the data insertion in "DW ITEM FC" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 4, DW ITEM FC [136]: The final commit for the data insertion  in "DW ITEM FC" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 4, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW APORTE PAGO" wrote 3608 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW ITEM BP" wrote 29912 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW ITEM DRE" wrote 32308 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW ITEM FC" wrote 63899 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW LOCAL EMPREENDIM" wrote 140 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW OBRA" wrote 176 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW PAGAM DISTRIB LUCRO" wrote 574 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 4, SSIS.Pipeline: "DW PLANO NEGOCIO" wrote 332 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 4, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 5, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 5, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 5, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 5, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW_GERAÇÃO DE CAIXA PN [588]: The final commit for the data insertion in "DW_GERAÇÃO DE CAIXA PN" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW RAP [487]: The final commit for the data insertion in "DW RAP" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW_GERAÇÃO DE CAIXA PN [588]: The final commit for the data insertion  in "DW_GERAÇÃO DE CAIXA PN" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW RAP [487]: The final commit for the data insertion  in "DW RAP" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW CENARIO [364]: The final commit for the data insertion in "DW CENARIO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW CENARIO [364]: The final commit for the data insertion  in "DW CENARIO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW QUANTIFIC OBRA [430]: The final commit for the data insertion in "DW QUANTIFIC OBRA" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW QUANTIFIC OBRA [430]: The final commit for the data insertion  in "DW QUANTIFIC OBRA" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW RESULT FINANC [514]: The final commit for the data insertion in "DW RESULT FINANC" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW RESULT FINANC [514]: The final commit for the data insertion  in "DW RESULT FINANC" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW ACOMP OBRA [245]: The final commit for the data insertion in "DW ACOMP OBRA" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW ACOMP OBRA [245]: The final commit for the data insertion  in "DW ACOMP OBRA" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW ATIVIDADE [278]: The final commit for the data insertion in "DW ATIVIDADE" has started.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW AVANC FISICO [333]: The final commit for the data insertion in "DW AVANC FISICO" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW ATIVIDADE [278]: The final commit for the data insertion  in "DW ATIVIDADE" has ended.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW AVANC FISICO [333]: The final commit for the data insertion  in "DW AVANC FISICO" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, DW FLUXO CAIXA PN [397]: The final commit for the data insertion in "DW FLUXO CAIXA PN" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, DW FLUXO CAIXA PN [397]: The final commit for the data insertion  in "DW FLUXO CAIXA PN" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 5, dw_acomp Empreend [543]: The final commit for the data insertion in "dw_acomp Empreend" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 5, dw_acomp Empreend [543]: The final commit for the data insertion  in "dw_acomp Empreend" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 5, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW ACOMP OBRA" wrote 1037 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW ATIVIDADE" wrote 949 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW AVANC FISICO" wrote 714 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW CENARIO" wrote 237 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW FLUXO CAIXA PN" wrote 20304 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW QUANTIFIC OBRA" wrote 182 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW RAP" wrote 33 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW RESULT FINANC" wrote 324 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "dw_acomp Empreend" wrote 2850 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 5, SSIS.Pipeline: "DW_GERAÇÃO DE CAIXA PN" wrote 4 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 5, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at CARREGAR DW NIVEL 6, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at CARREGAR DW NIVEL 6, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at CARREGAR DW NIVEL 6, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x4004300C at CARREGAR DW NIVEL 6, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DF at CARREGAR DW NIVEL 6, DW_PONTOS DE ATE [31]: The final commit for the data insertion in "DW_PONTOS DE ATE" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 6, DW_PONTOS DE ATE [31]: The final commit for the data insertion  in "DW_PONTOS DE ATE" has ended.
+Information: 0x402090DF at CARREGAR DW NIVEL 6, DW ITEM FC PN [2]: The final commit for the data insertion in "DW ITEM FC PN" has started.
+Information: 0x402090E0 at CARREGAR DW NIVEL 6, DW ITEM FC PN [2]: The final commit for the data insertion  in "DW ITEM FC PN" has ended.
+Information: 0x40043008 at CARREGAR DW NIVEL 6, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x4004300B at CARREGAR DW NIVEL 6, SSIS.Pipeline: "DW ITEM FC PN" wrote 119323 rows.
+Information: 0x4004300B at CARREGAR DW NIVEL 6, SSIS.Pipeline: "DW_PONTOS DE ATE" wrote 25 rows.
+Information: 0x40043009 at CARREGAR DW NIVEL 6, SSIS.Pipeline: Cleanup phase is beginning.
+SSIS package "D:\Projetos\DDSNA\Integration Services\PPF1\SPE_CargaStagingeDW\SSIS_DESENV_ETC71021\SSIS_DESENV_ETC71021\SPE_CargaStagingeDW.dtsx" finished: Success.

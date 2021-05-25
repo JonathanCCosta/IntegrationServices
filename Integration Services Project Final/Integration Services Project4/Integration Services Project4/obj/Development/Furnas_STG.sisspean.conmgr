@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Furnas_STG.sisspean"
+  DTS:DTSID="{534D5E1B-6DE4-44FC-95E2-4E0BBE5F0D0B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=CORP1039\RPTCORP;User ID=sisspean;Initial Catalog=Furnas_STG;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANybXBxCflkm/Zt3dTIP+mQAAAAACAAAAAAADZgAAwAAAABAAAADBH203CCb2562tzH029IguAAAAAASAAACgAAAAEAAAAOjQEGqExcpurZ30oIwm1594AAAAa03vNJGGdm9U9ziz4BUiBiXOjllGPQ0qMvC5CbFK1M5lK16cPaoD9ouoHZoZWn4Rg1to9onDIcfIT+udBZT5ce5vIMUeDHFiUfTfKKaVhoDx7HXkPde3ohftTCvO8ALchDGilvBbwRW3ghVPtK3iu00gKJp2PZ7wFAAAAL1InN/EhDK0nabWsy2HJO9J7sAU</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
